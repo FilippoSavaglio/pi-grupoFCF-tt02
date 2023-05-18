@@ -1,0 +1,1 @@
+console.log("Bien vinculado el Detalle de un album");
