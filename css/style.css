@@ -1,7 +1,92 @@
 /* HOME */
+*{
+    box-sizing: border-box;
+}
 
+body{
+    background-image: url(../img/photo-1557682250-33bd709cbe85.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 
+header{
+    display: flex;
+    font-family: 'Josefin Sans', sans-serif;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
 
+h1{
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 4%;
+    font-size: 100px;
+    letter-spacing: 10px;
+}
+
+img{
+    height: 80%;
+    width: 200px;
+}
+
+.lista-header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 125px;
+    margin-top: 35px;
+}
+
+li{
+    list-style: none;
+    font-size: 25px;
+    margin: 5px;
+}
+
+a{
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: white;
+    text-decoration: none;
+}
+
+form{ 
+    align-items: flex-start;
+    margin-left: 125px;
+    margin-top: 35px;
+}
+
+input, button{
+    font-family: 'Josefin Sans', sans-serif;
+    align-self: center;
+    margin: 1px;
+    margin-top: 12px;
+    padding: 9px;
+    border: 0px white solid;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+button{
+    color: black;
+    padding: 5px;
+}
+
+.slogan{
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    line-height: 3px;
+    margin: 5%;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.section-titulo{
+    text-align: center;
+}
 
 /* DETALLE-CANCION */
 
