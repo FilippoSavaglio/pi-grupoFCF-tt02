@@ -87,7 +87,13 @@ button{
 .section-titulo{
     text-align: center;
 }
-
+.subb{
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    line-height: 3px;
+    margin: 2.5%;
+    letter-spacing: 5px;
+}
 /* DETALLE-CANCION */
 
 
