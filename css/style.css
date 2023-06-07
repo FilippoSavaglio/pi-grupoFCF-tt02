@@ -94,6 +94,13 @@ button{
     margin: 2.5%;
     letter-spacing: 5px;
 }
+.foot{
+    text-align: center;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 10px; 
+    font-style: italic;
+}
 /* DETALLE-CANCION */
 
 
