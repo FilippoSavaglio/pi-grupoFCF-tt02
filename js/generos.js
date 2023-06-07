@@ -1,3 +1,3 @@
 console.log("Bien vinculado generos");
 
-let urlGeneros = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre`;
+let urlGeneros = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre`;
