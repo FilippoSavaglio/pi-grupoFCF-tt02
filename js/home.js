@@ -14,9 +14,11 @@ fetch(urlCanciones)
     for (let i=0; i<5; i++){
         songs += 
         `
-        <a href="detalle-cancion.html?id=${datos[i].id}"><img src="${datos[i].album.cover_big}" alt=""></a>
-                <h5><a href="detalle-artista.html?id=${datos[i].artist.id}">${datos[i].artist.name}</a></h5>
-                <h3><a href="detalle-cancion.html?id=${datos[i].id}">${datos[i].title}</a></h3>
+        <article class="item1">  
+                <a href="detalle-cancion.html?id=${datos[i].id}"><img src="${datos[i].album.cover_big}" alt=""></a>
+                <h5 class="margen"><a href="detalle-artista.html?id=${datos[i].artist.id}">${datos[i].artist.name}</a></h5>
+                <h3 class="margen"><a href="detalle-cancion.html?id=${datos[i].id}">${datos[i].title}</a></h3>
+        </article>
         ` 
     }
 
@@ -47,8 +49,8 @@ fetch(urlAlbums)
         `
         <article class="album_track_home">
             <a href="detalle-album.html?id=${datos[i].id}"><img src="${datos[i].cover_big}" alt=""></a>
-                <h5><a href="detalle-artista.html?id=${datos[i].artist.id}">${datos[i].artist.name}</a></h5>
-                <h3><a href="detalle-album.html?id=${datos[i].id}">${datos[i].title}</a></h3>
+                <h5 class="margen"><a href="detalle-artista.html?id=${datos[i].artist.id}">${datos[i].artist.name}</a></h5>
+                <h3 class="margen"><a href="detalle-album.html?id=${datos[i].id}">${datos[i].title}</a></h3>
         </article>
         ` 
     }
@@ -78,16 +80,15 @@ fetch(urlArtistas)
     for (let i=0; i<5; i++){
         artists += 
         `
-        <article>    
+        <article class="item1">    
             <a href="detalle-artista.html?id=${datos[i].id}"><img src="${datos[i].picture_big}" alt=""></a>
-            <h4><a href="detalle-artista.html?id=${datos[i].id}">${datos[i].name}</a></h4>
+            <h4 class="margen"><a href="detalle-artista.html?id=${datos[i].id}">${datos[i].name}</a></h4>
         </article>
         ` 
     }
-
-        sectionArtists.innerHTML += artists;
-
+    sectionArtists.innerHTML += artists;
     })
+
 .catch(function(error){
     console.log(error);
 })

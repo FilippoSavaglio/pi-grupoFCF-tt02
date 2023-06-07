@@ -101,6 +101,14 @@ button{
     font-size: 10px; 
     font-style: italic;
 }
+.item1{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+.margen{
+    margin-left: 20px;
+}
 /* DETALLE-CANCION */
 
 
