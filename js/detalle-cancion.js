@@ -60,6 +60,57 @@ fetch(urlArtistas)
     console.log(error);
 })
 
+
+/*                      Guardar en favorito                         */
+
+/* Crear un array vacio para luego ser completado con lo que trae localStorage --> */
+let favoritos = [];
+
+/* Recuperar localStorage de la key "favoritos" --> La key es el identificador */
+let recuperoStorage = localStorage.getItem('favoritos');
+
+/* Preguntar si es distinto de nulo para ver si tiene info --> el array puede estar vacio o no existir*/
+if(recuperoStorage != null) {
+    favoritos = JSON.parse(recuperoStorage); /*Si recuperoStorage tiene algo,
+                                             transofrmalo de JSON a algo manipulable, sino dejalo asi*/
+}
+
+/* Recurperar el elemento del DOM --> se recupero mediante un objeto literal llamado document
+--> el query selector recibe un parametro (string) --> hace referencia al selector(id)*/
+let fav = document.querySelector('#fav');
+
+/* preguntar si el array favoritos incluye este ID 
+--> si lo incluye cambiar el texto a quitar de favoritos*/
+
+if(favoritos.includes(id)){
+    fav.innerText = 'Sacar de Playlist'
+}
+
+/* agregar el evento click a el boton de Fav 
+- preguntar si el array de favoritos inlcuye el ID del personaje
+
+TRUE = si clickeo el btn y existe quiero eliminarlo y cambiar el texto del btn
+FALSE = si clickeo el btn y NOO existe quiero pushearlo y cambiar el texto del btn
+
+Pasar FAVORITOS a JSON y subirlos a localStorage */
+
+fav.addEventListener('click',function(){
+    if (favoritos.includes(id)) {
+        let indice = favoritos.indexOf(id)
+        favoritos.splice(indice,1);
+        fav.innerText = "Agregar a playlist"
+    } else {
+        favoritos.push(id)
+        fav.innerText = 'Sacar de Playlist'
+    }
+/* paso a subir la info al local Storage 
+--> lo tengo q pasar de dato manipulable en js a string*/
+let favoritosToString = JSON.stringify(favoritos);
+localStorage.setItem('favoritos', favoritosToString) /*el primer parametro hace referencia a la clave = favoritos,
+ el segundo a */
+})
+
+
 /* fetch(urlArtistas)
 .then(function(response){
     return response.json();
