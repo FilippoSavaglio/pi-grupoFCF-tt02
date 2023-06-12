@@ -31,7 +31,7 @@ fetch(urlDetalleAlbum)
     console.log(err);
 })
 
-let urlDetalleCancion = `https://api.allorigins.win/raw?url=https://api.deezer.com/track/${id}`
+let urlDetalleCancion = `https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks`
 
 fetch(urlDetalleCancion)
 .then(function (response) {

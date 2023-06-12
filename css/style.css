@@ -193,7 +193,7 @@ h4{
 
 .img{
     padding: 9px;
-    width: 400px;
+    width: 300px;
 }
 
 .art-detalle{
@@ -245,6 +245,19 @@ h4{
     font-family: 'Josefin Sans', sans-serif;
     color: white;
     font-size: 40px;
+}
+
+.lista1{
+    margin: 6px
+}
+
+.top {
+    margin: 6px;
+    margin: 2%;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 11px;
+    margin-left: 5%;
 }
 
 
