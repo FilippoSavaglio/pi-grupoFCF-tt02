@@ -229,6 +229,23 @@ h4{
 }
 
 /* DETALLE ALBUM */
+.h4_album{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 40px;
+}
+
+.h4-release{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 40px;
+}
+
+.track{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 40px;
+}
 
 
 
