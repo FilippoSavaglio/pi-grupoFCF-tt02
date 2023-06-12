@@ -274,14 +274,19 @@ h4{
 
 
 /* GENEROS */
-#generos{
+.generos{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
 }
 .img-gen{
     padding: 9px;
     width: 300px;
+}
+
+.titulo-genero{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
 }
 
 
