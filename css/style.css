@@ -274,6 +274,16 @@ h4{
 
 
 /* GENEROS */
+#generos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.img-gen{
+    padding: 9px;
+    width: 300px;
+}
+
 
 
 

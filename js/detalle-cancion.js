@@ -102,7 +102,7 @@ fav.addEventListener('click',function(){
     if (favoritos.includes(id)) {
         let indice = favoritos.indexOf(id)
         favoritos.splice(indice,1);
-        fav.innerText = "Agregar a playlist"
+        fav.innerText = "Agregar a Playlist"
     } else {
         favoritos.push(id)
         fav.innerText = 'Sacar de Playlist'
