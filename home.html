@@ -14,14 +14,15 @@
     <header>
         
         <form action="resultado-busqueda.html" method="GET">
-            <input type="search" name="search" value="" placeholder="Buscar">
+            <input type="search" name="search" value="" placeholder="Buscar en MG">
+            <i class="fas fa-exclamation-circle closeIcon"></i>
            <button type="submit"><i class="fas fa-search search"></i></button>
-            <p></p>
+            <p class="alerta-buscador"></p>
         </form>
 
         <ul class="lista-header">
-            <li><a href="./generos.html">      GENEROS     |   </a></li>
-            <li><a href="./playlist.html">     PLAYLIST      </a></li>
+            <li><a class="rutas-header" href="./generos.html">      GENEROS     |   </a></li>
+            <li><a class="rutas-header" href="./playlist.html">     PLAYLIST      </a></li>
             <!-- ACA ABAJO VA EL LOGO -->
         </ul>
 
@@ -32,39 +33,25 @@
         <h2 class="slogan">Encuentra tu ritmo, vive tu groove</h2>
     </section>
 
-    <br>
 
-    <h2 class="subb">
-        Canciones
-    </h2>
+    <h2 class="h2-home">CANCIONES POPULARES</h2>
 
-    <section class="container item1" id="canciones"> 
-      <article>
-        
-      </article>
-    </section>
+    <section class="canciones"> </section>
 
-    <br>
 
-    <h2 class="subb">
-        Albumes
-    </h2>
+    <h2 class="h2-home">ALBUMS POPULARES</h2>
 
-    <section class="container item1" id="albums"> 
-        <article>
-          </article>
-    </section>
+    <section id="albums"></section>
 
-    <br>
 
-    <h2 class="subb">
-        Artistas
-    </h2>
+    <h2 class="h2-home">ARTISTAS MAS ESCUCHADOS</h2>
 
-    <section class="container item1" id="Artistas"> 
-        <article>
-        </article>
-    </section>
+    <section id="artistas"></section>
+
+    <article class="arriba-conteiner">
+        <p class="arriba"><a href="#"> <i class="fas fa-arrow-up"></i></a></p>
+    </article>
+
 
     <footer>
 

@@ -7,17 +7,17 @@ fetch(urlCanciones)
 .then(function(data){
     
     let datos = data.data;
-    let sectionSongs = document.querySelector("#canciones");
+    let sectionSongs = document.querySelector(".canciones");
     let songs='';
     console.log(data)
 
     for (let i=0; i<5; i++){
         songs += 
         `
-        <article class="item1">  
+        <article class="section-home">  
                 <a href="detalle-cancion.html?id=${datos[i].id}"><img src="${datos[i].album.cover_big}" alt=""></a>
-                <h5 class="margen"><a href="detalle-artista.html?id=${datos[i].artist.id}">${datos[i].artist.name}</a></h5>
-                <h3 class="margen"><a href="detalle-cancion.html?id=${datos[i].id}">${datos[i].title}</a></h3>
+                <h5><a class="nombreDelArtista" href="detalle-artista.html?id=${datos[i].artist.id}">${datos[i].artist.name}</a></h5>
+                <h3><a href="detalle-cancion.html?id=${datos[i].id}">${datos[i].title}</a></h3>
         </article>
         ` 
     }
@@ -47,10 +47,10 @@ fetch(urlAlbums)
     for (let i=0; i<5; i++){
         albums += 
         `
-        <article class="album_track_home">
+        <article class="section-home">
             <a href="detalle-album.html?id=${datos[i].id}"><img src="${datos[i].cover_big}" alt=""></a>
-                <h5 class="margen"><a href="detalle-artista.html?id=${datos[i].artist.id}">${datos[i].artist.name}</a></h5>
-                <h3 class="margen"><a href="detalle-album.html?id=${datos[i].id}">${datos[i].title}</a></h3>
+                <h5><a class="nombreDelArtista" href="detalle-artista.html?id=${datos[i].artist.id}">${datos[i].artist.name}</a></h5>
+                <h3><a href="detalle-album.html?id=${datos[i].id}">${datos[i].title}</a></h3>
         </article>
         ` 
     }
@@ -73,16 +73,16 @@ fetch(urlArtistas)
 .then(function(data){
     
     let datos = data.data;
-    let sectionArtists = document.querySelector(".Artistas");
+    let sectionArtists = document.querySelector("#artistas");
     let artists ='';
     console.log(data)
 
     for (let i=0; i<5; i++){
         artists += 
         `
-        <article class="item1">    
+        <article class="artistas-home">    
             <a href="detalle-artista.html?id=${datos[i].id}"><img src="${datos[i].picture_big}" alt=""></a>
-            <h4 class="margen"><a href="detalle-artista.html?id=${datos[i].id}">${datos[i].name}</a></h4>
+            <h4><a href="detalle-artista.html?id=${datos[i].id}">${datos[i].name}</a></h4>
         </article>
         ` 
     }

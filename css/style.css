@@ -5,9 +5,8 @@
 
 body{
     background: #ff00cc;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header{
@@ -27,9 +26,14 @@ h1{
     letter-spacing: 10px;
 }
 
-img{
-    height: 80%;
-    width: 200px;
+
+
+a{
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .lista-header{
@@ -47,11 +51,9 @@ li{
     margin: 5px;
 }
 
-a{
+.rutas-header{
     letter-spacing: 2px;
     word-spacing: 2px;
-    color: white;
-    text-decoration: none;
 }
 
 form{ 
@@ -80,40 +82,151 @@ button{
     font-family:'Josefin Sans', sans-serif;
     color: white;
     line-height: 3px;
-    margin: 5%;
+    
     letter-spacing: 5px;
     text-align: center;
+}
+
+h3 {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+}
+
+h4{
+    font-family:'Josefin Sans', sans-serif;
 }
 
 .section-titulo{
     text-align: center;
 }
-.subb{
+.h2-home{
     font-family:'Josefin Sans', sans-serif;
     color: white;
-    line-height: 3px;
-    margin: 2.5%;
-    letter-spacing: 5px;
+    margin-top: 120px;
+    padding-bottom: 8px;
+    margin-left: 80px;
+    font-size: 30px;
+    
 }
 .foot{
+    margin-top: 80px;
+    margin-bottom: 80px;
     text-align: center;
     color: white;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 10px; 
+    font-size: 17px; 
     font-style: italic;
 }
-.item1{
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
+.section-home{
+    width: 18%;
+    padding: 2%; 
 }
-.margen{
-    margin-left: 20px;
+
+.section-home img{
+    border-radius: 5%;
+    width: 100%;
 }
+
+.section-home h5 a, .nombreDelArtista{
+    color: rgba(245, 245, 245, 0.795);
+    font-size: 15px;
+}
+
+.canciones{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+#albums{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+#artistas{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+.artistas-home{
+    width: 18%;
+    text-align: center; 
+    padding: 2%; 
+}
+
+.artistas-home img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.arriba-conteiner {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 6%;
+    margin-top: 6%;
+}
+
+.arriba{
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.836);
+    width: 35px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+
+.arriba a {
+    color: rgb(70, 67, 67);
+    font-size: 25px;
+}
+
 /* DETALLE-CANCION */
+#detalles{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 400px;
+    
+}
 
+.img{
+    padding: 9px;
+    width: 400px;
+}
 
+.art-detalle{
+    padding: 15px;
+    margin-left: 200px;
+}
 
+.h4-artista, .h4-album, .h4-escucha, .h4-detalle, .ruta-detalle{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 22px;
+}
+
+.h4-artista, .h4-album, .h4-escucha, .ruta-detalle{
+    font-size: 40px;
+}
+
+.h4-detalle{
+    font-size: 30px;
+}
+
+.ruta-detalle{
+    padding: 12px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border-radius: 22px;
+    text-align: center;
+}
+
+.detalle-foto{
+    border-radius: 80%;
+}
 
 /* DETALLE ALBUM */
 

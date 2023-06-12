@@ -14,7 +14,7 @@ fetch(urlDetalleCancion)
     section.innerText += `${data.title}`;
 
     let img = document.querySelector(".img");
-    img.innerHTML += `<img src="${data.album.cover_big}" alt="">`;
+    img.innerHTML += `<img class="detalle-foto" src="${data.album.cover_big}" alt="">`;
 
     let artista = document.querySelector(".h4-artista");
     artista.innerHTML += `<a href="detail_artist.html?id=${data.artist.id}">${data.artist.name}</a>`
@@ -31,34 +31,38 @@ fetch(urlDetalleCancion)
 })
 
 
-let urlArtistas = `https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks`;
-
-fetch(urlArtistas)
+/* CANCIONES POPULARES */
+let urlCanciones = `https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/tracks`;
+    
+fetch(urlCanciones)
 .then(function(response){
     return response.json()
 })
 .then(function(data){
+    
+    let datos = data.data;
+    let sectionSongs = document.querySelector(".canciones");
+    let songs='';
+    console.log(data)
 
-    console.log(data);
-    let info = info.data;
-    let canciones = document.querySelector("#detalles");
-    let detalles = ""
+    for (let i=0; i<5; i++){
+        songs += 
+        `
+        <article class="section-home">  
+                <a href="detalle-cancion.html?id=${datos[i].id}"><img src="${datos[i].album.cover_big}" alt=""></a>
+                <h5><a class="nombreDelArtista" href="detalle-artista.html?id=${datos[i].artist.id}">${datos[i].artist.name}</a></h5>
+                <h3><a href="detalle-cancion.html?id=${datos[i].id}">${datos[i].title}</a></h3>
+        </article>
+        ` 
+    }
 
-    detalles += ` 
-    <article class="la-info">    
-        <img src="${info[i].album.cover}" alt=" " >
-        <h4> Title: ${info[i].title}   </h4>
-        <p> Compuesta por: ${info[i].artist.name}  </p>
-        <p> Duracion: ${info[i].duration}  </p>
-        <p> Parte del album: ${info[i].album.title}  </p>
-        <p> Se encuentra en el top: ${info[i].position}  </p></article>
-    `
-    canciones.innerHTML = detalles;
+        sectionSongs.innerHTML += songs;
 
 })
 .catch(function(error){
     console.log(error);
 })
+
 
 
 /*                      Guardar en favorito                         */
