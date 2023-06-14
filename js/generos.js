@@ -22,7 +22,7 @@ fetch(urlGeneros)
         contenido += `
         <article class = "dentro">
 
-        <a href= "detalle-genero.html?id=${arrayInfo[i].id}&genre=${arrayInfo[i].name}"><img class="genero-img" src="${arrayInfo[i].picture}" alt="genre imagen"></a>
+        <a href= "detalle-genero.html?id=${arrayInfo[i].id}&genre=${arrayInfo[i].name}"><img class="genero-img" src="${arrayInfo[i].picture_medium}" alt="genre imagen"></a>
         <h4><a class="genero" href="detail-genres.html?id=${arrayInfo[i].id}&genre=${arrayInfo[i].name}">${arrayInfo[i].name}</a></h4>
                     `
     }

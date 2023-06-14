@@ -289,9 +289,21 @@ h4{
     font-size: 30px;
 }
 
+.she{
+    font-size: 45px;
+}
 
+.artist{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-
+.genero{
+    font-size: 40px;
+    font-weight: 300;
+}
 
 /* DETALLE DE GENERO */
 

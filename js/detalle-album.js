@@ -41,7 +41,7 @@ fetch(urlDetalleCancion)
     console.log(data);
     let arrayInfo = data.data;
     let tracklist = document.querySelector(".lista1");
-    let contenidoLista ="";
+    let contenidoLista ='';
     console.log(data);
 
     for (let i = 0; i < arrayInfo.length; i++){
@@ -59,33 +59,33 @@ fetch(urlDetalleCancion)
 })
  
 
-let urlDetalleArtista = `https://api.allorigins.win/raw?url=https://api.deezer.com/artist/${id}`;
+let urlAlbums = `https://api.allorigins.win/raw?url=https://api.deezer.com/chart/0/albums`;
 
-fetch(urlDetalleArtista)
+fetch(urlAlbums)
 .then(function(response){
-    return response.json();
+    return response.json()
 })
-
-.then(function(data){
-
+.then(function (data){
+    
     let datos = data.data;
-    let topAlbums = document.querySelector(".artistas");
-    let contenedor = "";
+    let sectionAlbums = document.querySelector("#albums");
+    let albums ='';
     console.log(data)
 
-    for(let i=0; i<5; i++){
-        contenedor += `
-        <article class="artista-home">
-        <a href="detalle-album.html?id=${datos[i].id}"><img src="${datos[i].cover_big}" alt"album imagen"></a>
-        <h4><a href="detalle-album.html?id=${datos[i].id}">${datos[i].title}</a></h4>
-        <h4><a class="nombreArtista" href="detalle-artista.html?id=${datos[i].artist.id}">${datos[i].artist.name}</a></h4> 
-        </article>    `
-
-
+    for (let i=0; i<5; i++){
+        albums += 
+        `
+        <article class="section-home">
+            <a href="detalle-album.html?id=${datos[i].id}"><img src="${datos[i].cover_big}" alt=""></a>
+                <h5><a class="nombreDelArtista" href="detalle-artista.html?id=${datos[i].artist.id}">${datos[i].artist.name}</a></h5>
+                <h3><a href="detalle-album.html?id=${datos[i].id}">${datos[i].title}</a></h3>
+        </article>
+        ` 
     }
-    topAlbums.innerHTML += contenedor;
-})
 
+        sectionAlbums.innerHTML += albums;
+
+})
 .catch(function(error){
     console.log(error);
 })
