@@ -194,6 +194,7 @@ h4{
 .img{
     padding: 9px;
     width: 300px;
+    margin-right: 45px;
 }
 
 .art-detalle{
@@ -226,9 +227,25 @@ h4{
 
 .detalle-foto{
     border-radius: 80%;
+    margin-right: 15px;
 }
 
 /* DETALLE ALBUM */
+
+.contenedor_artistas_home {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;  
+}
+
+.detallesAlbum{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 400px;
+}
+
 .h4_album{
     font-family: 'Josefin Sans', sans-serif;
     color: white;
@@ -251,21 +268,35 @@ h4{
     margin: 6px
 }
 
-.top {
-    margin: 6px;
-    margin: 2%;
+.top{
     font-family: 'Josefin Sans', sans-serif;
     color: white;
-    font-size: 11px;
+    font-size: 22px;
     margin-left: 5%;
 }
 
-
-
+.top{
+    margin: 6px;
+    font-size: 35px;
+    margin: 2%;
+}
 
 /* DETALLE ARTISTA */
 
+.h-cuatro{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 22px;
+    margin-left: 5%;
+}
 
+.h-cuatro{
+    font-size: 40px;
+}
+
+.contenido{
+    margin-left: 95px;
+}
 
 
 /* PLAYLIST */
@@ -276,13 +307,30 @@ h4{
 /* GENEROS */
 .generos{
     display: flex;
-    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+.genres {
+    width: 23%;
     text-align: center;
+    margin-top: 25px;
+    padding: 3%;
 }
-.img-gen{
-    padding: 9px;
-    width: 300px;
+
+.genres img {
+    border-radius: 5%;
+    width: 100%;
 }
+
+.genres h4 {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+
+
 
 .titulo-genero{
     font-family: 'Josefin Sans', sans-serif;
@@ -305,12 +353,69 @@ h4{
     font-weight: 300;
 }
 
+.genero-titulo{
+    font-size: 75px;
+}
+
 /* DETALLE DE GENERO */
+.genres-detail-titulo {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 5%;
+    font-size: 80px;
+    padding: 30px;
+}
 
-
-
+.title-genreDetail{
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: left;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    margin: 1%;
+}
 
 /* RESULTADO BUSQUEDA */
+.gif{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+}
 
+.gif img{
+    width: 30%;
+}
 
+i{
+    margin: 4px;
+    display: none;
+}
 
+.alerta{
+    color:rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.closeIcon{
+    display: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.result-titulo{
+    color: white;
+    text-align: left;
+    margin: 1%;
+    font-size: 60px;
+    margin-bottom: 3%;
+}
+
+.result-relacionados{
+    margin: 3%;
+    font-size: 40px;
+}

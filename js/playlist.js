@@ -50,3 +50,31 @@ if (favroitos == null || favoritos.length == 0) {
     }
 }
     /* No hay favoritos */
+
+
+
+    /* VALIDANDO FORMULARIO DE BUSQUEDA */
+    let formularioValid = document.querySelector("form");
+    let campoBuscar = document.querySelector("[name = search]");
+    let alert = document.querySelector(".alerta");
+    let closeIcon = document.querySelector(".closeIcon");
+
+    formularioValid.addEventListener("submit", function(e){
+        
+        e.preventDefault();
+
+        if (campoBuscar.value == "") {
+            alert.innerText = "El campo no puede estar vacio";
+            closeIcon.style.display = "inline"
+        } else if(campoBuscar.value.length < 3){
+            alert.innerText = "Por favor ingrese mas de 3 caracteres";
+            closeIcon.style.display = "inline"
+        }else{
+            this.submit();
+        }   
+    })
+
+    campoBuscar.addEventListener("input", function(){
+        alert.innerText = "";
+        closeIcon.style.display = "none"
+    })
