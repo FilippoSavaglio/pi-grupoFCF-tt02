@@ -322,6 +322,13 @@ h4{
     font-size: 75px;
 }
 
+.leyenda{
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 75px;
+    text-align: center;
+}
+
 /* GENEROS */
 .generos{
     display: flex;

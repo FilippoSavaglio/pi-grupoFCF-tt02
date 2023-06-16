@@ -1,7 +1,12 @@
 window.addEventListener('load', function(){
 
+    let leyenda = document.querySelector(".leyenda");
+    leyenda.innerHTML = `<section class="gif">
+        <img src="./img/avatar_facts_of_school.gif" alt="">
+        </section>`
+
     let loader = document.querySelector('.gif');
-    loader.style.display = 'none';
+    loader.style.display = 'inline';
     
     let queryString = location.search;
     let queryStringObj = new URLSearchParams (queryString);
@@ -15,12 +20,15 @@ window.addEventListener('load', function(){
     fetch(url)
     .then(function(response){
         return response.json();
+
     })
     .then(function(data){
         
-        let leyenda = document.querySelector(".leyenda");
-        if(data.data.length = 0){
-            leyenda.style.display = "block";
+        
+        if(data.data.length > 0){
+            leyenda.style.display = "none";
+        } else{
+            datoBuscado.style.display = "none";
         }
 
         let artistasData = data.data;
@@ -29,11 +37,12 @@ window.addEventListener('load', function(){
         console.log(data);
 
         for (let i = 0; i < artistasData.length; i++) {
+        console.log(artistasData[i].artist)
             infoDeArtistas += 
             `
             <article class="artistas-home">    
-                <a href="detalle-artista.html?id=${artistasData[i].id}"><img src="${artistasData[i].picture_big}" alt=""></a>
-                <h4><a href="detalle-artista.html?id=${artistasData[i].id}">ARTISTA: ${artistasData[i].name}</a></h4>
+                <a href="detalle-artista.html?id=${artistasData[i].id}"><img src="${artistasData[i].artist.picture}" alt=""></a>
+                <h4><a href="detalle-artista.html?id=${artistasData[i].id}">ARTISTA: ${artistasData[i].artist.name}</a></h4>
             </article>
             <article class="artistas-home">  
                 <a href="detalle-cancion.html?id=${artistasData[i].id}"><img src="${artistasData[i].album.cover_big}" alt=""></a><h4><a href="detalle-cancion.html?id=${artistasData[i].id}">CANCION: ${artistasData[i].title}</a></h4>
