@@ -34,10 +34,7 @@ window.addEventListener("load", function(){
             })
         }
     }
-        /* No hay favoritos */
-
-    /* let urlPlaylist = `https://api.allorigins.win/raw?url=https://api.deezer.com/track/${favoritos[i]}`; */
-
+    
         /* VALIDANDO FORMULARIO DE BUSQUEDA */
         let formularioValid = document.querySelector("form");
         let campoBuscar = document.querySelector("[name = search]");

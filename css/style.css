@@ -448,15 +448,56 @@ i{
 
 
 /* DISENO RESPONSIVE */
+
+/* TABLETS */
 @media (max-width: 768px){
 
     /* HOME */
+    .section-titulo{
+        margin-block-end: 10%;
+    }
 
+    .titulo-home{
+        font-size: 50px;
+        padding-top: 15%;
+    }
 
-}
+    .slogan{
+        font-size: 25px;
+        letter-spacing: 0px; 
+    }
 
-/* MOBILE */
-@media (max-width: 420px){
+    .h2-home{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .section-home{
+        width: 30%;
+        text-align: center;
+        padding: 4%;
+    }
+
+    .section-home h5 a{
+        font-size: 10px;
+    }
+
+    .section-home h3{
+        font-size: 15px;
+    }
+
+    .section-home h4{
+        font-size: 15px;
+    }
+
+    .arriba{
+        width: 30px;
+    }
+
+    .arriba a{
+        font-size: 20px;
+    }
+
 
     /* DETALLE DE CANCION */
     .titulo-detalles{
@@ -478,7 +519,7 @@ i{
         width: 300px;
     }
 
-    #detalles{
+    .detalles{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -499,6 +540,261 @@ i{
         justify-content: flex-start; 
     }
 
-    
+    .art-detalle{
+        width: 40%;
+    }
 
+    .top{
+        font-size: 17.5px;
+    }
+
+    .titulo-detalles{
+        font-size: 20px;
+    }
+
+
+    /* GENEROS */
+    .genero-titulo{
+        font-size: 50px;
+    }
+
+    .genres{
+        width: 30%;
+        margin-top: 0;
+        padding: 3%;
+    }
+
+    .genres h4 a {
+        font-size: 20px;
+    }
+
+
+    /* DETALLE DE GENERO */
+    .genres-detail-titulo{
+        font-size: 50px;
+    }
+
+
+    /* MENU */
+    form, input, button{
+        margin: 0;
+        margin-top: 0px;
+        padding: 6px;
+        font-size: 12px;
+        
+    } 
+
+    form {
+        margin-top: 2%;
+    }   
+
+    .lista-header{
+        font-size: 15px;
+        margin: 6px;
+    }
+
+
+    /* PLAYLIST */
+    .titulo-playlist{
+        font-size: 60px;
+    }
+
+
+    /* SEARCH RESULTS */
+    .result-titulo{
+        font-size: 35px;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+
+    .leyenda{
+        font-size: 20px;
+    }
+
+}
+
+
+
+/* MOBILE */
+@media(max-width: 420px){
+
+    /* HOME */
+    form, input, button{
+        margin: 0;
+        margin-top: 0px;
+        padding: 6px;
+        font-size: 10px;
+        
+    }
+    
+    .lista-header { 
+        font-size: 15px;
+        margin: 4px;
+        padding: 0;
+        width: 100%;
+    }
+    
+    form {
+        padding-left: 25%;
+    }
+
+    .logoMG{
+        display: none;
+    }
+
+    .section-titulo{
+        text-align: center;
+        padding-left: 5%;
+        padding-block-end: 10%;
+    }
+
+    .titulo-home{
+        font-size: 40px;
+        padding-top: 15%;
+        margin: 0;
+        letter-spacing: auto;
+        margin-block-end: 20px;
+    }
+
+    .slogan{
+        font-size: 15px;
+        margin: 0;
+        letter-spacing: 0px;
+    }
+
+    .h2-home{
+        text-align: center;
+    }
+
+    .canciones, .albums, .artistas{
+        padding: 1%;
+    }
+
+    .section-home{
+        width: 45%;
+        margin: 2.5%;
+        text-align: center;
+    }
+
+    .arriba{
+        width: 23px;
+    }
+
+    .arriba a{
+        font-size: 15px;
+    }
+
+    
+    /* DETALLE DE CANCION */
+    .section-titulo{
+        margin-top: 10%;
+        margin-bottom: 5% ;
+    }
+
+    .img{
+        width: 45%;
+    }
+
+    .detalle-foto{
+        width: 45%;
+        margin-top: 5%;
+    }
+
+    .detalles{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 300px;
+    }
+
+    .art-detalle{
+        margin-left: 15px;
+    }
+
+    .h4-artista, .h4-album, .h4-escucha, .h4-detalle{
+        font-size: 11px;
+        justify-content: flex-start;
+    }
+
+
+    /* DETALLE ALBUM */
+    .top{
+        font-size: 11px;
+    }
+
+    .art-detalle{
+        width: 100%;
+    }
+
+
+    /* DETALLE DE ARTISTA */
+    .titulo-detalles{
+        font-size: 45px;
+    }
+
+    .artist{
+        display: flex;
+        margin-top: 5%;
+    }
+
+    .h-cuatro, .top{
+        font-size: 11px;
+    }
+
+
+    /* SEARCH RESULTS */
+    .result-titulo{
+        font-size: 3opx;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        text-align: center;
+    }
+
+    .leyenda{
+        font-size: 15px;
+    }
+
+
+    /* GENEROS */
+    .genres {
+        width: 45%;
+        text-align: center;
+        margin-top: 0;
+        padding: 2%;
+    }
+
+    .genero-titulo{
+        font-size: 30px;
+        margin: 10%;
+        text-align: center;
+    }
+
+    .generos{
+        padding: 6%;
+    }
+
+
+    /* DETALLE DE GENERO */
+    .genres-detail-titulo{
+        font-size: 30px;
+        margin: 10%;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+
+    /* PLAYLIST */
+    .titulo-playlist {
+        font-size: 40px;
+    }
+
+
+    /* FOOTER */
+    footer h2 {
+        font-size: 6.5px;
+    }
+    .foot {
+        font-size: 6.5px;
+    }
+    
 }

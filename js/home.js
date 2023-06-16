@@ -82,7 +82,7 @@ window.addEventListener("load", function(){
         for (let i=0; i<5; i++){
             artists += 
             `
-            <article class="artistas-home">    
+            <article class="section-home">    
                 <a href="detalle-artista.html?id=${datos[i].id}"><img src="${datos[i].picture_big}" alt=""></a>
                 <h4><a href="detalle-artista.html?id=${datos[i].id}">${datos[i].name}</a></h4>
             </article>
