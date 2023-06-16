@@ -435,3 +435,61 @@ i{
     margin: 3%;
     font-size: 40px;
 }
+
+
+
+/* DISENO RESPONSIVE */
+@media (max-width: 768px){
+
+    /* HOME */
+
+
+}
+
+/* MOBILE */
+@media (max-width: 420px){
+
+    /* DETALLE DE CANCION */
+    .titulo-detalles{
+        font-size: 45px;
+    }
+
+    .h4-artista, .h4-album, .h4-escucha, .h4-detalle{
+        font-size: 20px;
+        width: 300px;
+    }
+    
+    .h2-home{
+        font-size: 30px;
+    }
+
+    .ruta-detalle{
+        font-size: 15px;
+        padding: 6px;
+        width: 300px;
+    }
+
+    #detalles{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        min-height: 540px;
+    }
+
+    .art-detalle{
+        width: 40%;
+    }
+
+
+    /* DETALLE ALBUM */
+    .detallesAlbum{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start; 
+    }
+
+    
+
+}
