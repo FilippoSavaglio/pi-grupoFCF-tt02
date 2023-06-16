@@ -23,6 +23,9 @@ window.addEventListener("load", function(){
 
         let album = document.querySelector(".h4-album");
         album.innerHTML += `<a href="detalle-album.html?id=${data.album.id}">${data.album.title}</a>`
+
+        let rutaFavoritos = document.querySelector(".ruta-detalle");
+        rutaFavoritos.innerHTML += `<a href="playlist.html?id=${data.album.cover_big}"alt="">`
         
         let escucha = document.querySelector(".h4-escucha");
         escucha.innerHTML += `${data.title}`
