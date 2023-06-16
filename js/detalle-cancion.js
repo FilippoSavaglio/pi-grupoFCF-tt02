@@ -24,8 +24,7 @@ window.addEventListener("load", function(){
         let album = document.querySelector(".h4-album");
         album.innerHTML += `<a href="detalle-album.html?id=${data.album.id}">${data.album.title}</a>`
 
-        let rutaFavoritos = document.querySelector(".ruta-detalle");
-        rutaFavoritos.innerHTML += `<a href="playlist.html?id=${data.album.cover_big}"alt="">`
+        
         
         let escucha = document.querySelector(".h4-escucha");
         escucha.innerHTML += `${data.title}`
@@ -89,7 +88,8 @@ fav.addEventListener("click", function(){
     if (favoritos.includes(id)) {
         let idASacar = favoritos.indexOf(id);
         favoritos.splice(idASacar, 1);
-        document.querySelector(".ruta-detalle").innerHTML = `<i class="far fa-heart"></i> Añadir a mi playlist`;
+        fav.innerHTML = `<i class="far fa-heart"></i> Añadir a mi playlist`;
+
     } else {
         favoritos.push(id);
         document.querySelector(".ruta-detalle").innerHTML = `<i class="fas fa-heart"></i> Quitar de mí playlist`;

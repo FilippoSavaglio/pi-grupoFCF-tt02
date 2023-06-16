@@ -7,7 +7,7 @@ window.addEventListener("load", function(){
     let section = document.querySelector(".track_home_conteiner")
 
     if (favoritos == null || favoritos.length == 0) {
-        section.innerHTML = "<p>No hay favoritos seleccionados</p>"
+        section.innerHTML = "<p> No hay canciones en tu playlist</p>";
     } else {
         
         for (let i=0; i < favoritos.length; i++){
@@ -22,10 +22,10 @@ window.addEventListener("load", function(){
                 console.log(data);
                 let cancionesFav = "";
 
-                cancionesFav.innerHTML += `
+                section.innerHTML += `
                 <article class="track_home">
-                    <a href="detail_track.html?id=${data.id}"><img src="${data.album.cover_big}" width="200px" alt="Album Cover"></a><h3><a href="detail_track.html?id=${data.id}">${data.title}</a></h3>
-                    <h5 class="nombreDelArtista"><a href="detail_artist.html?id=${data.artist.id}">${data.artist.name}</a></h5>
+                    <a href="detalle-cancion.html?id=${data.id}"><img src="${data.album.cover_big}" width="200px" alt="Album Cover"></a><h3><a href="detalle-cancion.html?id=${data.id}">${data.title}</a></h3>
+                    <h5 class="nombreDelArtista"><a href="detalle-artista.html?id=${data.artist.id}">${data.artist.name}</a></h5>
                 </article>
                 `
             })
