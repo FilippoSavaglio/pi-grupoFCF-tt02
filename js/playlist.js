@@ -1,80 +1,66 @@
-console.log("Bien vinculado playlist");
-
-let urlPlaylist = `https://api.allorigins.win/raw?url=https://api.deezer.com/track/${favoritos[i]}`;
-
-
-/*                      Recuperar de favoritos    (PROXIMA CLASE)                   */
-
-/* Recupero el storage */
-let recuperoStorage = localStorage.getItem('favoritos');
-
-/* transformar el json (string) en obj o un array */
-let favoritos = JSON.parse(recuperoStorage)
-
-/* Recuperar el elemento del DOM */
-let section = document.querySelector("#lista");
-
-/* Crear personajesFavoritos string vaci para luego ser completado con el fetch */
-let cancionesfav = "";
-
-/* Preguntar: Favoritos es null O su longitus es igual a 0
-TRUE: dar un mensaje en la section diciendo que no hay datos en favoritos
-FALSE: Hacer un FOR que recorra favoritos y haga un fetch por cada elemento del array de favoritos*/
-if (favroitos == null || favoritos.length == 0) {
-    section.innerHTML = "<p>No hay favoritos seleccionados</p>"
+window.addEventListener("load", function(){
     
-} else {
-    
-    for (let i=0; i < favroitos.length; i++){
-        let urlPlay = `https://api.allorigins.win/raw?url=https://api.deezer.com/track/${favoritos[i]}`
+    let recuperoStorage = localStorage.getItem('favoritos');
 
-        fetch(urlPlay)
-        .then(function(data){
-            return Response.JSON()
-        })
-        .then(function(data) {
-            console.log(data);
+    let favoritos = JSON.parse(recuperoStorage);
 
-            cancionesfav += `
-            <article class="section-home">  
-                    <a href="detalle-cancion.html?id=${data[i].id}"><img src="${data[i].album.cover_big}" alt=""></a>
-                    <h5><a class="nombreDelArtista" href="detalle-artista.html?id=${data[i].artist.id}">${datos[i].artist.name}</a></h5>
-                    <h3><a href="detalle-cancion.html?id=${data[i].id}">${data[i].title}</a></h3>
-            </article>
-            ` 
-        section.innerHTML = cancionesfav;
-        })
-        .catch(function(error) {
-            console.log(error);
-        })
-    }
-}
-    /* No hay favoritos */
+    let section = document.querySelector(".track_home_conteiner")
 
-
-
-    /* VALIDANDO FORMULARIO DE BUSQUEDA */
-    let formularioValid = document.querySelector("form");
-    let campoBuscar = document.querySelector("[name = search]");
-    let alert = document.querySelector(".alerta");
-    let closeIcon = document.querySelector(".closeIcon");
-
-    formularioValid.addEventListener("submit", function(e){
+    if (favoritos == null || favoritos.length == 0) {
+        section.innerHTML = "<p>No hay favoritos seleccionados</p>"
+    } else {
         
-        e.preventDefault();
+        for (let i=0; i < favoritos.length; i++){
+            
+            let urlPlay = `https://api.allorigins.win/raw?url=https://api.deezer.com/track/${favoritos[i]}`
 
-        if (campoBuscar.value == "") {
-            alert.innerText = "El campo no puede estar vacio";
-            closeIcon.style.display = "inline"
-        } else if(campoBuscar.value.length < 3){
-            alert.innerText = "Por favor ingrese mas de 3 caracteres";
-            closeIcon.style.display = "inline"
-        }else{
-            this.submit();
-        }   
-    })
+            fetch(urlPlay)
+            .then(function(response){
+                return response.json()
+            })
+            .then(function(data) {
+                console.log(data);
+                let cancionesFav = "";
 
-    campoBuscar.addEventListener("input", function(){
-        alert.innerText = "";
-        closeIcon.style.display = "none"
-    })
+                cancionesFav.innerHTML += `
+                <article class="track_home">
+                    <a href="detail_track.html?id=${data.id}"><img src="${data.album.cover_big}" width="200px" alt="Album Cover"></a><h3><a href="detail_track.html?id=${data.id}">${data.title}</a></h3>
+                    <h5 class="nombreDelArtista"><a href="detail_artist.html?id=${data.artist.id}">${data.artist.name}</a></h5>
+                </article>
+                `
+            })
+            .catch( function(error) {
+                console.log(error);
+            })
+        }
+    }
+        /* No hay favoritos */
+
+    /* let urlPlaylist = `https://api.allorigins.win/raw?url=https://api.deezer.com/track/${favoritos[i]}`; */
+
+        /* VALIDANDO FORMULARIO DE BUSQUEDA */
+        let formularioValid = document.querySelector("form");
+        let campoBuscar = document.querySelector("[name = search]");
+        let alert = document.querySelector(".alerta");
+        let closeIcon = document.querySelector(".closeIcon");
+
+        formularioValid.addEventListener("submit", function(e){
+            
+            e.preventDefault();
+
+            if (campoBuscar.value == "") {
+                alert.innerText = "El campo no puede estar vacio";
+                closeIcon.style.display = "inline"
+            } else if(campoBuscar.value.length < 3){
+                alert.innerText = "Por favor ingrese mas de 3 caracteres";
+                closeIcon.style.display = "inline"
+            }else{
+                this.submit();
+            }   
+        })
+
+        campoBuscar.addEventListener("input", function(){
+            alert.innerText = "";
+            closeIcon.style.display = "none"
+        })
+})

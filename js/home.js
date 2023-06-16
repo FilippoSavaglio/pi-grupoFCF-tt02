@@ -42,7 +42,7 @@ window.addEventListener("load", function(){
     .then(function (data){
         
         let datos = data.data;
-        let sectionAlbums = document.querySelector("#albums");
+        let sectionAlbums = document.querySelector(".albums");
         let albums ='';
         console.log(data)
 
@@ -75,7 +75,7 @@ window.addEventListener("load", function(){
     .then(function(data){
         
         let datos = data.data;
-        let sectionArtists = document.querySelector("#artistas");
+        let sectionArtists = document.querySelector(".artistas");
         let artists ='';
         console.log(data)
 

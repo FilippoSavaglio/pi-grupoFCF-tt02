@@ -1,8 +1,8 @@
 window.addEventListener("load", function(){
     
-    let queryString = location.search;
-    let queryStringToObject = new URLSearchParams(queryString);
-    id = queryStringToObject.get('id');
+    let queryString = location.search 
+    let queryStringToObject = new URLSearchParams(queryString); 
+    let id = queryStringToObject.get('id');
 
     let urlDetalleCancion = `https://api.allorigins.win/raw?url=https://api.deezer.com/track/${id}`;
 
@@ -65,6 +65,39 @@ window.addEventListener("load", function(){
         console.log(error);
     })
 
+})
+
+let favoritos = [];
+
+let recuperoStorage = localStorage.getItem('favoritos');
+
+if (recuperoStorage != null) {
+    favoritos = JSON.parse(recuperoStorage);
+}
+
+if(favoritos.includes(id)){
+    document.querySelector('.ruta-detalle').innerHTML = `<i class="fas fa-heart"></i> Quitar de mí playlist`;
+}
+
+let fav = document.querySelector(".ruta-detalle")
+    console.log(fav);
+
+fav.addEventListener("click", function(e){
+    e.preventDefault();
+
+    if (favoritos.includes(id)) {
+        let idASacar = favoritos.indexOf(id);
+        favoritos.splice(idASacar, 1);
+        document.querySelector(".ruta-detalle").innerHTML = `<i class="far fa-heart"></i> Añadir a mi playlist`;
+    } else {
+        favoritos.push(id);
+        console.log(favoritos);
+        document.querySelector(".ruta-detalle").innerHTML = `<i class="fas fa-heart"></i> Quitar de mí playlist`;
+    }
+
+    let favParaStorage = JSON.stringify(favoritos);
+    localStorage.setItem('favoritos', favParaStorage);
+    console.log(localStorage)
 })
 
 
