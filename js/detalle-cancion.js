@@ -16,7 +16,7 @@ window.addEventListener("load", function(){
         section.innerText += `${data.title}`;
 
         let img = document.querySelector(".img");
-        img.innerHTML += `<img width="400px" class="section-home" src="${data.album.cover_big}" alt="">`;
+        img.innerHTML += `<img width="400px" class="detalle-foto" src="${data.album.cover_big}" alt="">`;
 
         let artista = document.querySelector(".h4-artista");
         artista.innerHTML += `<a href="detalle-artista.html?id=${data.artist.id}">${data.artist.name}</a>`
@@ -24,8 +24,6 @@ window.addEventListener("load", function(){
         let album = document.querySelector(".h4-album");
         album.innerHTML += `<a href="detalle-album.html?id=${data.album.id}">${data.album.title}</a>`
 
-        
-        
         let escucha = document.querySelector(".h4-escucha");
         escucha.innerHTML += `${data.title}`
 
